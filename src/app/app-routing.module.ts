@@ -18,6 +18,37 @@ const routes: Routes = [
     path : 'home',
     component : HomeComponent
   },
+  {
+    path : 'collection',
+    component : CollectionComponent,
+    children : [
+      {
+        path : '',
+        redirectTo : '/home',
+        pathMatch : 'full',
+      },
+      {
+        path : ':cat_id/furniture',
+        component : ItemListComponent,
+      },
+      {
+        path : ':cat_id/furniture/:it_id',
+        component : ItemDetailComponent,
+      },
+    ]
+  },
+  {
+    path : 'contactus',
+    component : ContactUsComponent
+  },
+  {
+    path : 'not-found',
+    component : PageNotFoundComponent
+  },
+  {
+    path : '**',
+    redirectTo : '/not-found'
+  },
 ];
 
 @NgModule({

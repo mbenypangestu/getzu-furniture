@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { CategoryService } from './shared/service/category/category.service';
+// import { Category } from './shared/model/category.model';
 
 @Component({
   selector: 'app-collection',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionComponent implements OnInit {
 
-  constructor() { }
+  categoryName = "";
+
+  // constructor(private categorySrv: CategoryService) { }
 
   ngOnInit() {
+    // this.categorySrv.categoryUpdated
+    // .subscribe(
+    //   (categorySelected : Category) => {
+    //   this.categoryName = categorySelected.cat_name;
+    //   }
+    // );
   }
 
 }

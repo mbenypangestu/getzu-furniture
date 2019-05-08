@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+// import { CategoryService } from '../../shared/service/category.service';
+// import { FurnitureService } from '../../shared/service/furniture.service';
+// import { Furniture } from '../../shared/model/furniture.model';
 
 @Component({
   selector: 'app-item-list',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemListComponent implements OnInit {
 
-  constructor() { }
+  categorySelected = "0";
+  // furnitureList: Furniture[] = [];
 
-  ngOnInit() {
-  }
-
+  // constructor(
+  //   private router: Router,
+  //   private route: ActivatedRoute,
+  //   private categorySrv: CategoryService,
+  //   private furnitureSrv: FurnitureService) {
+  // }
+  // ngOnInit() {
+  //   this.route.params
+  //   .subscribe((params: Params) => {
+  //     this.categorySelected = params['cat_id'];
+  //     this.categorySrv.selectCategory(this.categorySelected);
+  //     this.furnitureList = [];
+  //     this.furnitureSrv.loadFurniture(this.categorySelected)
+  //     .subscribe((result)=> {
+  //       this.furnitureList = result;
+  //     });
+  //   });
+  // }
 }
